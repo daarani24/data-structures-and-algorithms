@@ -6,4 +6,4 @@ for i in a:
     fl=i
   elif (i>sl and i!=fl):
     sl=i
- print(sl)
+print(sl)

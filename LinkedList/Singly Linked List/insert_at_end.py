@@ -13,4 +13,3 @@ class singly:
             t=t.next
         t.next=newnode
 
-

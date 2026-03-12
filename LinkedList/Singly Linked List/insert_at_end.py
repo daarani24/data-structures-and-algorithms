@@ -12,6 +12,5 @@ class singly:
         while t.next:
             t=t.next
         t.next=newnode
-        return head
 
 

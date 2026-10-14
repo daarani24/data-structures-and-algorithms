@@ -7,6 +7,7 @@ This repository contains solutions to DSA problems.
 - Strings
 - Linked Lists
 - Stack and Queue
+- Trees and Graphs 
 - Sorting Algorithms
 - Searching Algorithms
 

@@ -23,7 +23,7 @@ def build_tree(values):
             cur.right=TreeNode(values[i])
             q.append(cur.right)
         i+=1
-        return root
+    return root
 
 class solution:
     def same_tree(self,p,q):
@@ -36,7 +36,7 @@ class solution:
 def main():
     p_values=json.loads(input())
     q_values=json.loads(input())
-    
+
     p=build_tree(p_values)
     q=build_tree(q_values)
 

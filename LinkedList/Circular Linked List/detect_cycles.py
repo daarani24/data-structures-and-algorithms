@@ -1,7 +1,7 @@
 class ListNode:
     def __init__(self,val=0,next=None):
         self.val=val
-        self.next=None
+        self.next=next
 
 def build_list(values):
     dummy=tail=ListNode()

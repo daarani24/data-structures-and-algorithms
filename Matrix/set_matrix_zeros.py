@@ -1,0 +1,43 @@
+def set_zeroes(matrix):
+    if not matrix: 
+        return
+    rows, cols = len(matrix), len(matrix[0])
+    row_zero = False
+
+    for r in range(rows):
+        for c in range(cols):
+            if matrix[r][c] == 0:
+                matrix[0][c] = 0
+                if r > 0:
+                    matrix[r][0] = 0
+                else:
+                    row_zero = True
+
+    for r in range(1, rows):
+        for c in range(1, cols):
+            if matrix[0][c] == 0 or matrix[r][0] == 0:
+                matrix[r][c] = 0
+                
+    if matrix[0][0] == 0:
+        for r in range(rows):
+            matrix[r][0] = 0
+    if row_zero:
+        for c in range(cols):
+            matrix[0][c] = 0
+
+if __name__ == "__main__":
+    rows = int(input("Enter number of rows: "))
+    cols = int(input("Enter number of columns: "))
+    matrix = []
+    
+    for i in range(rows):
+        while True:
+            row_input = input(f"Row {i+1}: ")
+            row = list(map(int, row_input.split()))
+            if len(row) == cols:
+                matrix.append(row)
+                break
+
+    set_zeroes(matrix)
+    for row in matrix: 
+        print(row)
